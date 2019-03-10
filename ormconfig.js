@@ -1,13 +1,24 @@
-module.exports = {
+const defaultConfig = {
 	type: 'mongodb',
-	host: 'localhost',
-	port: 27017,
-	username: '',
-	password: '',
-	database: 'tt-mongo',
 	synchronize: true,
 	logging: false,
 	entities: [
-		'src/**/*.entity.ts'
+		'src/**/*.entity.{ts,js}'
 	]
+};
+
+if (process.env.NODE_ENV) {
+
+	module.exports = {
+		...defaultConfig,
+		url: 'mongodb://root:root1234@ds163905.mlab.com:63905/labs-challenge',
+	};
+} else {
+	
+	module.exports = {
+		...defaultConfig,
+		host: 'localhost',
+		port: 27027,
+		database: 'tt-mongo'
+	};
 }
