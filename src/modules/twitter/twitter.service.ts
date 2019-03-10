@@ -24,7 +24,6 @@ export class TwitterService {
 				}
 			});
 
-			console.log(lastTweet && lastTweet.tweet_id)
 			const res = await this.twitter.get('search/tweets', {
 				q: hashtags.map(hashtag => `#${hashtag.name}`).join(' OR ') + ' AND -filter:retweets',
 				since_id: lastTweet && lastTweet.tweet_id,
