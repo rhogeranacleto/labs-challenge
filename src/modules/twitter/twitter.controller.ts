@@ -22,7 +22,7 @@ export class TwitterController {
 	}
 
 	@Get('tweets')
-	public getTweet(
+	public getTweets(
 		@Query('take') take?: number,
 		@Query('skip') skip?: number,
 		@Query('hashtags') hashtags?: string) {
