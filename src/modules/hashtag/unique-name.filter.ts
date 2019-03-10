@@ -8,7 +8,7 @@ export class UniqueNameFilter extends BaseExceptionFilter implements ExceptionFi
 
 		const context = host.switchToHttp();
 		const response = context.getResponse();
-
+		
 		if (exception.constructor.name === 'BulkWriteError') {
 
 			return response.status(500).json({
