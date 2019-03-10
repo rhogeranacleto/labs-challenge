@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
-    "test": "jest --config ./jest.config.json"
+    "start": "cd dist && node index.js",
+    "dev": "nodemon",
+    "test": "jest --config ./jest.config.json",
+    "heroku-postbuild": "tsc --p ./"
+  },
+  "engines": {
+    "node": "8.11.3"
   },
   "repository": {
     "type": "git",
