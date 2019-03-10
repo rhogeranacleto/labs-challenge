@@ -17,7 +17,7 @@ export class TwitterController {
 
 		setTimeout(() => {
 
-			this.httpService.get('http://localhost:8000').toPromise();
+			this.httpService.get(process.env.NODE_ENV ? 'https://labs-challenge.herokuapp.com/' : 'http://localhost:8000').toPromise();
 		}, 3000);
 	}
 
