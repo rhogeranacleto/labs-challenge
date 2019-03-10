@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon",
+    "test": "jest --config ./jest.config.json"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,11 @@
     "typescript": "^3.3.3333"
   },
   "devDependencies": {
+    "@nestjs/testing": "^5.7.4",
+    "@types/jest": "^23.1.4",
+    "jest": "^23.6.0",
     "nodemon": "^1.18.10",
-    "ts-node": "^8.0.2"
+    "ts-jest": "^23.10.4",
+    "ts-node": "^6.0.1"
   }
 }
