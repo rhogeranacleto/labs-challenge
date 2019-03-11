@@ -19,7 +19,7 @@ _And that is it :tada:!_
 ### Requeriments
 
 - node 8.11.3
-- mongo 3.x running on port 27027
+- mongo 3.x running on port 27017
 
 Run `npm install` then `npm run dev`.
 
