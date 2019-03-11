@@ -3,7 +3,7 @@ import { getMongoRepository, DeepPartial } from "typeorm";
 import { Hashtag } from "./hashtag.entity";
 import { UniqueNameFilter } from "./unique-name.filter";
 
-@Controller('hashtag')
+@Controller('hashtags')
 export class HashtagController {
 
 	@Post()
